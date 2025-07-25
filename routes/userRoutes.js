@@ -9,6 +9,7 @@ const {
 } = require("../middleware/validation");
 
 // Public routes
+router.post("/addUser", UserController.createUser);
 router.post("/register", validateRegistration, UserController.register);
 router.post("/login", validateLogin, UserController.login);
 
